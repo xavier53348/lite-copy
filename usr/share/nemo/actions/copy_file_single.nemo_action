@@ -1,0 +1,20 @@
+# Standard tokens that can be used in the Name, Comment (tooltip) and Exec fields:
+#
+# %U - insert URI list of selection
+# %F - insert path list of selection
+# %P - insert path of parent (current) directory
+# %f or %N (deprecated) - insert display name of first selected file
+# %p - insert display name of parent directory
+# %D - insert device path of file (i.e. /dev/sdb1)
+
+
+[Nemo Action]
+Active=true
+Name=  one copy
+Quote=double
+Comment=create_path
+Icon-Name=nemiver
+Selection=S
+Extensions=any;
+Exec=<copy_path.py %F>
+Separator=/#/

@@ -1,0 +1,147 @@
+#!/usr/bin/python3
+import os, psutil
+
+# user = os.listdir('/media/')[0]
+
+
+
+USER=psutil.users()[0][0]
+os.system('/usr/local/bin/pip3 install /usr/bin/modules/wheels/pydub-0.24.1-py2.py3-none-any.whl')
+
+if os.path.exists("/home/{}/.local/share/file-manager/actions/".format(USER)):
+	
+	with open("/home/{}/.local/share/file-manager/actions/Abort Paste.desktop".format(USER),'w') as f:
+		f.write("""[Desktop Entry]
+Type=Action
+Icon[es_US]=/usr/share/icons/litecopy/copy_cancel.png
+Icon[es]=/usr/share/icons/litecopy/copy_cancel.png
+ToolbarLabel[es_US]=Abort Paste
+ToolbarLabel[es]=Abort Paste
+Name[es_US]=Abort Paste
+Name[es]=Abort Paste
+Profiles=profile-zero;
+
+TargetToolbar=true
+Tooltip[es_US]=Elimina toda la copia permitiendo seleccionar desde el principio
+Tooltip[es]=Elimina toda la copia permitiendo seleccionar desde el principio
+
+TargetLocation=true
+
+[X-Action-Profile profile-zero]
+Exec='/usr/bin/modules/caja_actions/copy_paste_abort.py' 
+Name[es_US]=Abortar
+Name[es]=Abortar""")
+
+	with open("/home/{}/.local/share/file-manager/actions/copy.desktop".format(USER),'w') as f:
+		f.write("""[Desktop Entry]
+Type=Action
+Icon[es_US]=/usr/share/icons/litecopy/copy_single.png
+Icon[es]=/usr/share/icons/litecopy/copy_single.png
+ToolbarLabel[es_US]=Copy
+ToolbarLabel[es]=Copy
+Name[es_US]=Copy
+Name[es]=Copy
+Profiles=profile-zero;
+
+TargetToolbar=true
+Tooltip[es_US]=selecciona los ficheros a copiar seran almacenados en /tmp/
+Tooltip[es]=selecciona los ficheros a copiar seran almacenados en /tmp/
+
+[X-Action-Profile profile-zero]
+Exec='/usr/bin/modules/caja_actions/copy_path.py'  %f
+Name[es_US]=Copiar
+Name[es]=Copiar""")
+
+	with open("/home/{}/.local/share/file-manager/actions/Paste.desktop".format(USER),'w') as f:
+		f.write("""[Desktop Entry]
+Type=Action
+Icon[es_US]=/usr/share/icons/litecopy/copy_paste.png
+Icon[es]=/usr/share/icons/litecopy/copy_paste.png
+ToolbarLabel[es_US]=Paste
+ToolbarLabel[es]=Paste
+Name[es_US]=Paste
+Name[es]=Paste
+Profiles=profile-zero;
+
+Tooltip[es_US]=Usar en la carpeta que vamos a copiar toda la info
+Tooltip[es]=Usar en la carpeta que vamos a copiar toda la info
+TargetToolbar=true
+TargetContext=false
+TargetLocation=true
+
+[X-Action-Profile profile-zero]
+Exec='/usr/bin/modules/caja_actions/copy_paste_path.py' /#/%d
+Name[es_US]=Pegar
+Name[es]=Pegar
+Path=%F""")
+
+else:
+	print('no existe')
+
+	os.mkdir("/home/{}/.local/share/file-manager".format(USER))
+	os.mkdir("/home/{}/.local/share/file-manager/actions".format(USER))
+	with open("/home/{}/.local/share/file-manager/actions/Abort Paste.desktop".format(USER),'w') as f:
+		f.write("""[Desktop Entry]
+Type=Action
+Icon[es_US]=/usr/share/icons/litecopy/copy_cancel.png
+Icon[es]=/usr/share/icons/litecopy/copy_cancel.png
+ToolbarLabel[es_US]=Abort Paste
+ToolbarLabel[es]=Abort Paste
+Name[es_US]=Abort Paste
+Name[es]=Abort Paste
+Profiles=profile-zero;
+
+TargetToolbar=true
+Tooltip[es_US]=Elimina toda la copia permitiendo seleccionar desde el principio
+Tooltip[es]=Elimina toda la copia permitiendo seleccionar desde el principio
+
+TargetLocation=true
+
+[X-Action-Profile profile-zero]
+Exec='/usr/bin/modules/caja_actions/copy_paste_abort.py' 
+Name[es_US]=Abortar
+Name[es]=Abortar""")
+
+	with open("/home/{}/.local/share/file-manager/actions/copy.desktop".format(USER),'w') as f:
+		f.write("""[Desktop Entry]
+Type=Action
+Icon[es_US]=/usr/share/icons/litecopy/copy_single.png
+Icon[es]=/usr/share/icons/litecopy/copy_single.png
+ToolbarLabel[es_US]=Copy
+ToolbarLabel[es]=Copy
+Name[es_US]=Copy
+Name[es]=Copy
+Profiles=profile-zero;
+
+TargetToolbar=true
+Tooltip[es_US]=selecciona los ficheros a copiar seran almacenados en /tmp/
+Tooltip[es]=selecciona los ficheros a copiar seran almacenados en /tmp/
+
+[X-Action-Profile profile-zero]
+Exec='/usr/bin/modules/caja_actions/copy_path.py'  %f
+Name[es_US]=Copiar
+Name[es]=Copiar""")
+
+	with open("/home/{}/.local/share/file-manager/actions/Paste.desktop".format(USER),'w') as f:
+		f.write("""[Desktop Entry]
+Type=Action
+Icon[es_US]=/usr/share/icons/litecopy/copy_paste.png
+Icon[es]=/usr/share/icons/litecopy/copy_paste.png
+ToolbarLabel[es_US]=Paste
+ToolbarLabel[es]=Paste
+Name[es_US]=Paste
+Name[es]=Paste
+Profiles=profile-zero;
+
+Tooltip[es_US]=Usar en la carpeta que vamos a copiar toda la info
+Tooltip[es]=Usar en la carpeta que vamos a copiar toda la info
+TargetToolbar=true
+TargetContext=false
+TargetLocation=true
+
+[X-Action-Profile profile-zero]
+Exec='/usr/bin/modules/caja_actions/copy_paste_path.py' /#/%d
+Name[es_US]=Pegar
+Name[es]=Pegar
+Path=%F""")
+

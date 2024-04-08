@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=Paste Copy
+Quote=double
+Comment=create_path
+Icon-Name=patchage
+Selection=None
+Extensions=None;
+Exec=<copy_paste_path.py %F>
+Separator=/#/

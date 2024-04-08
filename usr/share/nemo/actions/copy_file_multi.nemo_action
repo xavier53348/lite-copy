@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=  more copies
+Quote=double
+Comment=create_path
+Icon-Name=gpk-service-pack
+Selection=M
+Extensions=any;
+Exec=<copy_path.py %F>
+Separator=/#/

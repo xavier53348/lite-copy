@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=Abort Copy
+Quote=double
+Comment=create_path
+Icon-Name=abrt
+Selection=None
+Extensions=None;
+Exec=<copy_paste_abort.py %F>
+Separator=/#/

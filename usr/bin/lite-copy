@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+if __name__ == '__main__':
+    import os
+
+    try:
+    	os.system('/usr/bin/python3 /usr/bin/main.py')
+    except Exception as e:
+    	with open('/home/mjay/Desktop/ERROR_LITE_COPY.txt','a') as f:
+    		f.write(e)

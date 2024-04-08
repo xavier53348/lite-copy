@@ -1,0 +1,51 @@
+Package: LiteCopy
+Version: 1.1
+Architecture: all
+Essencial: no
+Depends: python3 , mplayer (>= 1.2.1) ,python3-tk(>= 3.5.1-1) ,caja-actions(>= 1.8.0), python3-pip (>= 8.1.1)
+Installed-Size: 1053
+Section: Debug
+Maintainer: Javier Quesada Reyes <kuko53348@gmail.com>
+Priority: extra
+Homepage: http://javier53348.cubava.cu/
+Description: LiteCopy
+ .
+ Linux Desktop Copy es un pequeno proyecto que nace con la necesidad de que aquellas personas que 
+ estan familiarizado a otras plataformas, se sientan familiarizado en linux como si fuesen el mismo sistema,.
+ .
+ De hecho solo pretendo que vean a este proyecto, como una alternativa a lo que seria un supercopy o un ultracopy,
+ para windows. Este proyecto empezo por un hobby y ya tiene la primera version desde que comenzo el desarrollo el 2/11/2020, 
+ .
+ A medida que pase el timpo se le agregaran mas uncionalidades, las pruebas se han hecho con linux Mint 18.03
+ version 3.6.6 kernel 4.10.0-38-generic pero es compatible con futuras versiones de mint.
+ .
+ Se ha trabajado para corregir bugs de compatibilidad brindando soporte para entornos [ Mate , Cinamon , XFCE, LXDE ]
+ .
+ funcionalidades:
+ .
+ - [+] Obtimatizacion del codigo al maximo brindando mejor rendiento
+ - [+] Corregido errores y problemas de la version beta 1.0 codigo reescribiendolo desde 0
+ - [+] agregar
+ - [+] borrar
+ - [+] salvar
+ - [+] pausar
+ - [+] pasar
+ - [+] continuar
+ - [+] movimiento de imagenes
+ - [+] sonido al terminar la copia
+ - [+] sonido al detectar espacio insuficiente
+  .
+ Extras:
+ .
+ - [x] soporte para idiomas [ SPA, ING, FRA, GER, RUS, CHI, KOR, POR ]
+ - [x] soporte para Desktops [ Nautilus, KDE ]
+ - [x] soporte para Desktops [ Windows 10 ]
+ - [x] apagar la pc despues de la copia
+ - [x] mover ficheros
+ - [x] chequear ficheros
+ - [x] copiar atributos de ficheros
+ - [x] tiempo de inicio e copia
+ - [x] hinbernar despues de copia
+ - [x] soporte para drag and drop
+ - [x] explusar memoria
+ .
